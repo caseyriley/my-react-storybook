@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import "./explore-filter.css";
 import { DownOutlined, UpOutlined, SearchOutlined } from "@ant-design/icons";
-import { List } from "lodash";
+
 
 <style>
   @import

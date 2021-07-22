@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots ButtonColor Default 1`] = `
+<div
+  className="button-color red"
+  onClick={[Function]}
+>
+  Choose color
+</div>
+`;
+
 exports[`Storyshots Task Archived 1`] = `
 <div
   className="list-item TASK_ARCHIVED"

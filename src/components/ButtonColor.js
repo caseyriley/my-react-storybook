@@ -26,7 +26,6 @@ export default function ButtonColor({ task: {id}}) {
 Task.propTypes = {
     task: PropTypes.shape({
         id: PropTypes.string.isRequired,
-        color: PropTypes.string.isRequired,
     }),
     nextColor: PropTypes.func,
 }

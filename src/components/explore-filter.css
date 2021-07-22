@@ -1,0 +1,81 @@
+.explore-filter {
+  max-width: 300px;
+  width: 100%;
+  border: 1px dashed lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.explore-filter-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.explore-filter-title {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+.explore-filter-section {
+  width: 100%;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 200;
+  font-size: 13px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid black;
+  position: relative;
+}
+.explore-filter-section-span {
+  margin: 28px 5px 12px 20px;
+}
+.explore-filter-section-delete {
+  margin: 28px 20px 12px 0px;
+  height: 8px;
+  width: 8px;
+  background-image: url('./assets/x-icon.png');
+  background-size: cover;
+  position: absolute;
+  right: 20px;
+}
+.down-outlined {
+  font-size: 10px;
+  position: absolute;
+  right: 20px;
+  margin: 28px 0px 12px 20px;
+}
+.explore-filter-input {
+  width: 100%;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 200;
+  font-size: 13px;
+  outline: none;
+  border: none;
+  margin: 28px 20px 12px 0px;
+}
+.explore-filter-input::placeholder {
+  color: black;
+}
+.explore-filter-mag {
+  margin: 28px 15px 12px 15px;
+}
+.explore-filter-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.explore-filter-selection-span {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 200;
+  font-size: 13px;
+  color: grey;
+  margin: 12px 0px 0px 12px;
+}
+.bold {
+  font-weight: 700;
+  color: black;
+
+}

@@ -357,7 +357,7 @@ export const ExploreFilter = ({
           //   className={"down-outlined"}
           //   onClick={toggleBusinessChevron}
           // />
-          <img class={'down-outlined'} onClick={toggleBusinessChevron} src={downChevron} alt={""}/>
+          <img class={'down-outlined turnUp'} onClick={toggleBusinessChevron} src={downChevron} alt={""}/>
         ) : (
           // <DownOutlined
           //   className={"down-outlined"}

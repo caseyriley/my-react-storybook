@@ -6,6 +6,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  background-color: white;
 }
 .explore-filter-top {
   width: 100%;
@@ -41,11 +42,15 @@
   right: 20px;
 }
 .down-outlined {
-  height: 10px;
+  height: 20px;
   font-size: 10px;
   position: absolute;
   right: 20px;
   margin: 28px 0px 12px 20px;
+  transition: all 1s;
+}
+.turnUp {
+  transform: rotate(-180deg);
 }
 .explore-filter-input {
   width: 100%;

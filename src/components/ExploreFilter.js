@@ -317,17 +317,9 @@ export const ExploreFilter = ({
           />
         )}
         {countryChevronState ? (
-          // <UpOutlined
-          //   className={"down-outlined"}
-          //   onClick={toggleCountryChevron}
-          // />
-          '+'
-        ) : (
-          // <DownOutlined
-          //   className={"down-outlined"}
-          //   onClick={toggleCountryChevron}
-          // />
-          '-'
+          <img class={'down-outlined turnUp'} onClick={toggleCountryChevron} src={downChevron} alt={""}/>
+         ) : (
+          <img className={'down-outlined'} onClick={toggleCountryChevron} src={downChevron} alt={""}/>
         )}
       </div>
       <div ref={countriesRef}>
@@ -353,16 +345,8 @@ export const ExploreFilter = ({
           BUSINESS TYPE: {businessDropdownState[0] !== "All" ? "..." : "All"}
         </span>
         {businessChevronState ? (
-          // <UpOutlined
-          //   className={"down-outlined"}
-          //   onClick={toggleBusinessChevron}
-          // />
           <img class={'down-outlined turnUp'} onClick={toggleBusinessChevron} src={downChevron} alt={""}/>
         ) : (
-          // <DownOutlined
-          //   className={"down-outlined"}
-          //   onClick={toggleBusinessChevron}
-          // />
           <img className={'down-outlined'} onClick={toggleBusinessChevron} src={downChevron} alt={""}/>
         )}
       </div>
@@ -393,17 +377,9 @@ export const ExploreFilter = ({
           />
         )}
         {priceChevronState ? (
-          // <UpOutlined
-          //   className={"down-outlined"}
-          //   onClick={togglePriceChevron}
-          // />
-          '+'
-        ) : (
-          // <DownOutlined
-          //   className={"down-outlined"}
-          //   onClick={togglePriceChevron}
-          // />
-          '-'
+          <img class={'down-outlined turnUp'} onClick={togglePriceChevron} src={downChevron} alt={""}/>
+          ) : (
+            <img className={'down-outlined'} onClick={togglePriceChevron} src={downChevron} alt={""}/>
         )}
       </div>
       <div ref={pricesRef}>

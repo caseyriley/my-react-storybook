@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import "./explore-filter.css";
 // import { DownOutlined, UpOutlined, SearchOutlined } from "@ant-design/icons";
+import downChevron from '../assets/icon/Arrow-Down-icon.png'
 
 
 <style>
@@ -356,13 +357,13 @@ export const ExploreFilter = ({
           //   className={"down-outlined"}
           //   onClick={toggleBusinessChevron}
           // />
-          '+'
+          <img class={'down-outlined'} onClick={toggleBusinessChevron} src={downChevron} alt={""}/>
         ) : (
           // <DownOutlined
           //   className={"down-outlined"}
           //   onClick={toggleBusinessChevron}
           // />
-          '-'
+          <img className={'down-outlined'} onClick={toggleBusinessChevron} src={downChevron} alt={""}/>
         )}
       </div>
       <div ref={businessesRef}>

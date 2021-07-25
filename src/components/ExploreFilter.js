@@ -424,7 +424,7 @@ export const ExploreFilter = ({
           })}
       </div>
 
-      <div className={"explore-filter-section"}>
+      <div className={"explore-filter-last-section"}>
         <div className={"explore-filter-search"}>
           <img className={"magGlass"} src={magGlass} alt={""} />
           <input

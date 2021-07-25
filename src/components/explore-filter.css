@@ -2,6 +2,7 @@
   max-width: 300px;
   width: 100%;
   border: 1px dashed lightgrey;
+  border-radius: 6px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -46,6 +47,16 @@
   border-bottom: 1px solid black;
   position: relative;
 }
+.explore-filter-last-section {
+  width: 100%;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 200;
+  font-size: 13px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
 .explore-filter-section-span {
   margin: 28px 5px 12px 20px;
 }
@@ -53,10 +64,10 @@
   margin: 28px 20px 12px 0px;
   height: 8px;
   width: 8px;
-  /* background-image: url('./assets/x-icon.png'); */
+  background-image: url('../assets/icon/x-icon.png');
   background-size: cover;
   position: absolute;
-  right: 20px;
+  right: 30px;
 }
 .down-outlined {
   height: 20px;

@@ -327,13 +327,12 @@ export const ExploreFilter = ({
           />
         )}
       </div>
-      <div ref={countriesRef}>
+      <div ref={countriesRef} className={`country-box-open ${!countryChevronState ? "box-cosed" : ""}`}>
         {countryChevronState &&
           countryNames.map((name, index) => {
             return (
               <div key={index} className={"explore-filter-selection"}>
                 <span
-                  // ref={countriesRef.current[index] = name }
                   className={"explore-filter-selection-span"}
                   onClick={() => {
                     selectCountry(name);
@@ -365,7 +364,7 @@ export const ExploreFilter = ({
           />
         )}
       </div>
-      <div ref={businessesRef}>
+      <div ref={businessesRef} className={`business-box-open ${!businessChevronState ? "box-cosed" : ""}`}>
         {businessChevronState &&
           businessTypesState.map((type, index) => {
             return (

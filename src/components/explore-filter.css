@@ -19,6 +19,18 @@
   font-size: 18px;
   margin: 20px 0px 0px 20px;
 }
+.country-box-open {
+  height: 215px;
+  transition: all .5s;
+}
+
+.business-box-open {
+  height: 105px;
+  transition: all .5s;
+}
+.box-cosed {
+  height: 0px;
+}
 .explore-filter-section {
   width: 100%;
   font-family: "Quicksand", sans-serif;

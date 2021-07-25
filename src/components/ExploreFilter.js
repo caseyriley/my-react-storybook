@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
 import "./explore-filter.css";
 // import { DownOutlined, UpOutlined, SearchOutlined } from "@ant-design/icons";
-import downChevron from '../assets/icon/Arrow-Down-icon.png'
-
+import downChevron from "../assets/icon/Arrow-Down-icon.png";
+import magGlass from "../assets/icon/MagnifyingGlass.png";
 
 <style>
   @import
@@ -19,7 +19,7 @@ const defBusinessTypes = [
   "ethical experiences",
   "Resposible Travel Curators",
   "socially responsible eateries",
-]
+];
 
 export const ExploreFilter = ({
   countryNames = ["HongKong", "India", "Indonesia"],
@@ -83,16 +83,14 @@ export const ExploreFilter = ({
   ...props
 }) => {
   const [countryDropdownState, setCountryDopdownState] = useState(["All"]);
-  const [countryChevronState, setCountryChevronState] = useState(
-    false
-  );
-  const [businessChevronState, setBusinessChevronState] = useState(
-    false
-  );
+  const [countryChevronState, setCountryChevronState] = useState(false);
+  const [businessChevronState, setBusinessChevronState] = useState(false);
   const [businessDropdownState, setBusinessDropdownState] = useState(["All"]);
   const [priceChevronState, setPriceChevronState] = useState(false);
   const [priceDropdownState, setPriceDropdownState] = useState(["All"]);
-  const [businessTypesState, setBusinessTypesState] = useState(defBusinessTypes);
+  const [businessTypesState, setBusinessTypesState] = useState(
+    defBusinessTypes
+  );
   const [priceState, setPriceState] = useState(["$", "$$"]);
   const countriesRef = useRef([]);
   const businessesRef = useRef([]);
@@ -169,10 +167,7 @@ export const ExploreFilter = ({
           }
         }
         const string = country[place]["BusinessTypes"];
-        if (
-          businessTypesState ===
-          defBusinessTypes
-        ) {
+        if (businessTypesState === defBusinessTypes) {
           setBusinessTypesState(string);
         } else {
           let array = [...businessTypesState];
@@ -299,7 +294,7 @@ export const ExploreFilter = ({
   return (
     <div className={"explore-filter"}>
       <div className={"explore-filter-top"}>
-        <span className={"explore-filter-title"}>Filter</span>
+        <span className={"explore-filter-title"}>Collapsible Filter</span>
       </div>
       <div className={"explore-filter-section"}>
         <span className={"explore-filter-section-span"}>
@@ -317,9 +312,19 @@ export const ExploreFilter = ({
           />
         )}
         {countryChevronState ? (
-          <img class={'down-outlined turnUp'} onClick={toggleCountryChevron} src={downChevron} alt={""}/>
-         ) : (
-          <img className={'down-outlined'} onClick={toggleCountryChevron} src={downChevron} alt={""}/>
+          <img
+            class={"down-outlined turnUp"}
+            onClick={toggleCountryChevron}
+            src={downChevron}
+            alt={""}
+          />
+        ) : (
+          <img
+            className={"down-outlined"}
+            onClick={toggleCountryChevron}
+            src={downChevron}
+            alt={""}
+          />
         )}
       </div>
       <div ref={countriesRef}>
@@ -345,9 +350,19 @@ export const ExploreFilter = ({
           BUSINESS TYPE: {businessDropdownState[0] !== "All" ? "..." : "All"}
         </span>
         {businessChevronState ? (
-          <img class={'down-outlined turnUp'} onClick={toggleBusinessChevron} src={downChevron} alt={""}/>
+          <img
+            class={"down-outlined turnUp"}
+            onClick={toggleBusinessChevron}
+            src={downChevron}
+            alt={""}
+          />
         ) : (
-          <img className={'down-outlined'} onClick={toggleBusinessChevron} src={downChevron} alt={""}/>
+          <img
+            className={"down-outlined"}
+            onClick={toggleBusinessChevron}
+            src={downChevron}
+            alt={""}
+          />
         )}
       </div>
       <div ref={businessesRef}>
@@ -377,9 +392,19 @@ export const ExploreFilter = ({
           />
         )}
         {priceChevronState ? (
-          <img class={'down-outlined turnUp'} onClick={togglePriceChevron} src={downChevron} alt={""}/>
-          ) : (
-            <img className={'down-outlined'} onClick={togglePriceChevron} src={downChevron} alt={""}/>
+          <img
+            class={"down-outlined turnUp"}
+            onClick={togglePriceChevron}
+            src={downChevron}
+            alt={""}
+          />
+        ) : (
+          <img
+            className={"down-outlined"}
+            onClick={togglePriceChevron}
+            src={downChevron}
+            alt={""}
+          />
         )}
       </div>
       <div ref={pricesRef}>
@@ -401,12 +426,14 @@ export const ExploreFilter = ({
       </div>
 
       <div className={"explore-filter-section"}>
-        {/* <SearchOutlined className={"explore-filter-mag"} /> */}
-        <input
-          className={"explore-filter-input"}
-          type={"text"}
-          placeholder={"SEARCH ASIAN BUSINESSES"}
-        />
+        <div className={"explore-filter-search"}>
+          <img className={"magGlass"} src={magGlass} alt={""} />
+          <input
+            className={"explore-filter-input"}
+            type={"text"}
+            placeholder={"SEARCH ASIAN BUSINESSES"}
+          />
+        </div>
       </div>
     </div>
   );

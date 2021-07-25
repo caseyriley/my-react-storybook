@@ -406,7 +406,7 @@ export const ExploreFilter = ({
           />
         )}
       </div>
-      <div ref={pricesRef}>
+      <div ref={pricesRef} className={`price-box-open ${!priceChevronState ? "box-cosed" : ""}`}>
         {priceChevronState &&
           priceState.map((price, index) => {
             return (

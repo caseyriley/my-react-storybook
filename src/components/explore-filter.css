@@ -28,6 +28,10 @@
   height: 105px;
   transition: all .5s;
 }
+.price-box-open {
+  height: 65px;
+  transition: all .5s;
+}
 .box-cosed {
   height: 0px;
 }

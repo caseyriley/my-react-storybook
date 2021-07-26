@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import "./explore-filter.css";
-// import { DownOutlined, UpOutlined, SearchOutlined } from "@ant-design/icons";
 import downChevron from "../assets/icon/Arrow-Down-icon.png";
 import magGlass from "../assets/icon/MagnifyingGlass.png";
 
@@ -8,11 +7,6 @@ import magGlass from "../assets/icon/MagnifyingGlass.png";
   @import
   url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 </style>;
-
-// export interface ExploreFilterProps {
-//   countryNames?: Array<string>;
-//   country?: any;
-// }
 
 const defBusinessTypes = [
   "eco-accommodations",
@@ -91,7 +85,7 @@ export const ExploreFilter = ({
   const [businessTypesState, setBusinessTypesState] = useState(
     defBusinessTypes
   );
-  const [priceState, setPriceState] = useState(["$", "$$"]);
+  const [priceState, setPriceState] = useState(["all prices","under $200", "$200 - $500", "over $500"]);
   const countriesRef = useRef([]);
   const businessesRef = useRef([]);
   const pricesRef = useRef([]);
@@ -294,7 +288,7 @@ export const ExploreFilter = ({
   return (
     <div className={"explore-filter"}>
       <div className={"explore-filter-top"}>
-        <span className={"explore-filter-title"}>Collapsible Filter</span>
+        <span className={"explore-filter-title"}>Eco Travel Filter</span>
       </div>
       <div className={"explore-filter-section"}>
         <span className={"explore-filter-section-span"}>
@@ -430,7 +424,7 @@ export const ExploreFilter = ({
           <input
             className={"explore-filter-input"}
             type={"text"}
-            placeholder={"SEARCH ASIAN BUSINESSES"}
+            placeholder={"SEARCH ECO BUSINESSES"}
           />
         </div>
       </div>

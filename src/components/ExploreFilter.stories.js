@@ -22,13 +22,13 @@ Asia.args = {
         "Resposible Travel Curators",
         "socially responsible eateries",
       ],
-      "Prices": ["$", "$$"],
-      "SearchString": "SEARCH ASIAN BUSINESSES",
+      "Prices": ["under $200", "under $400", "under $600", "under $800", "under $1000", "over $1000"],
+      "SearchString": "SEARCH ECO BUSINESSES",
     },
     "Hong Kong": {
       "BusinessTypes": ["eco-accommodations"],
       "Prices": ["$", "$$"],
-      "SearchString": "SEARCH ASIAN BUSINESSES",
+      "SearchString": "SEARCH ECO BUSINESSES",
     },
     "India": {
       "BusinessTypes": [
@@ -38,35 +38,35 @@ Asia.args = {
         "socially responsible eateries",
       ],
       "Prices": ["$", "$$"],
-      "SearchString": "SEARCH ASIAN BUSINESSES",
+      "SearchString": "SEARCH ECO BUSINESSES",
     },
     "Indonesia": {
       "BusinessTypes": [
         "eco-accommodations",
       ],
       "Prices": ["$", "$$"],
-      "SearchString": "SEARCH ASIAN BUSINESSES",
+      "SearchString": "SEARCH ECO BUSINESSES",
     },
     "Kenya": {
       "BusinessTypes": [
         "Responsible Travel Curators"
       ],
       "Prices": ["$"],
-      "SearchString": "SEARCH ASIAN BUSINESSES",
+      "SearchString": "SEARCH ECO BUSINESSES",
     },
     "Laos": {
       "BusinessTypes": [
         "eco-accommodations",
       ],
       "Prices": ["$$$"],
-      "SearchString": "SEARCH ASIAN BUSINESSES",
+      "SearchString": "SEARCH ECO BUSINESSES",
     },
     "Malaysia": {
       "BusinessTypes": [
         "eco-accommodations",
       ],
       "Prices": ["$$$"],
-      "SearchString": "SEARCH ASIAN BUSINESSES",
+      "SearchString": "SEARCH ECO BUSINESSES",
     },
     "Philippines": {
       "BusinessTypes": [
@@ -74,14 +74,14 @@ Asia.args = {
         "socially responsible eateries",
       ],
       "Prices": ["$$"],
-      "SearchString": "SEARCH ASIAN BUSINESSES",
+      "SearchString": "SEARCH ECO BUSINESSES",
     },
     "United States Of America": {
       "BusinessTypes": [
         "eco-accommodations",
       ],
       "Prices": ["$$"],
-      "SearchString": "SEARCH ASIAN BUSINESSES",
+      "SearchString": "SEARCH ECO BUSINESSES",
     },
   },
 };

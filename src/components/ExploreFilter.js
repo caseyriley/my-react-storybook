@@ -1,7 +1,5 @@
 import React, { useState, useRef } from "react";
 import "./explore-filter.css";
-import downChevron from "../assets/icon/Arrow-Down-icon.png";
-import magGlass from "../assets/icon/MagnifyingGlass.png";
 
 <style>
   @import
@@ -15,67 +13,76 @@ const defBusinessTypes = [
   "socially responsible eateries",
 ];
 
-export const ExploreFilter = ({
-  countryNames = ["HongKong", "India", "Indonesia"],
-  country = {
-    All: {
-      BusinessTypes: [
-        "eco-accommodations",
-        "ethical experiences",
-        "Resposible Travel Curators",
-        "socially responsible eateries",
-      ],
-      Prices: ["$", "$$"],
-      SearchString: "SEARCH ASIAN BUSINESSES",
-    },
-    "Hong Kong": {
-      BusinessTypes: ["eco-accommodations"],
-      Prices: ["$", "$$"],
-      SearchString: "SEARCH ASIAN BUSINESSES",
-    },
-    India: {
-      BusinessTypes: [
-        "eco-accommodations",
-        "ethical experiences",
-        "Resposible Travel Curators",
-        "socially responsible eateries",
-      ],
-      Prices: ["$", "$$"],
-      SearchString: "SEARCH ASIAN BUSINESSES",
-    },
-    Indonesia: {
-      BusinessTypes: ["eco-accommodations"],
-      Prices: ["$", "$$"],
-      SearchString: "SEARCH ASIAN BUSINESSES",
-    },
-    Kenya: {
-      BusinessTypes: ["Responsible Travel Curators"],
-      Prices: ["$"],
-      SearchString: "SEARCH ASIAN BUSINESSES",
-    },
-    Laos: {
-      BusinessTypes: ["eco-accommodations"],
-      Prices: ["$$$"],
-      SearchString: "SEARCH ASIAN BUSINESSES",
-    },
-    Malaysia: {
-      BusinessTypes: ["eco-accommodations"],
-      Prices: ["$$$"],
-      SearchString: "SEARCH ASIAN BUSINESSES",
-    },
-    Philippines: {
-      BusinessTypes: ["eco-accommodations", "socially responsible eateries"],
-      Prices: ["$$"],
-      SearchString: "SEARCH ASIAN BUSINESSES",
-    },
-    "United States Of America": {
-      BusinessTypes: ["eco-accommodations"],
-      Prices: ["$$"],
-      SearchString: "SEARCH ASIAN BUSINESSES",
-    },
+const countryNames = [
+  "Hong Kong",
+  "India",
+  "Indonesia",
+  "Kenya",
+  "Laos",
+  "Malaysia",
+  "Philippines",
+  "United States Of America",
+];
+
+const country = {
+  All: {
+    BusinessTypes: [
+      "eco-accommodations",
+      "ethical experiences",
+      "Resposible Travel Curators",
+      "socially responsible eateries",
+    ],
+    Prices: ["$", "$$"],
+    SearchString: "SEARCH ASIAN BUSINESSES",
   },
-  ...props
-}) => {
+  "Hong Kong": {
+    BusinessTypes: ["eco-accommodations"],
+    Prices: ["$", "$$"],
+    SearchString: "SEARCH ASIAN BUSINESSES",
+  },
+  India: {
+    BusinessTypes: [
+      "eco-accommodations",
+      "ethical experiences",
+      "Resposible Travel Curators",
+      "socially responsible eateries",
+    ],
+    Prices: ["$", "$$"],
+    SearchString: "SEARCH ASIAN BUSINESSES",
+  },
+  Indonesia: {
+    BusinessTypes: ["eco-accommodations"],
+    Prices: ["$", "$$"],
+    SearchString: "SEARCH ASIAN BUSINESSES",
+  },
+  Kenya: {
+    BusinessTypes: ["Responsible Travel Curators"],
+    Prices: ["$"],
+    SearchString: "SEARCH ASIAN BUSINESSES",
+  },
+  Laos: {
+    BusinessTypes: ["eco-accommodations"],
+    Prices: ["$$$"],
+    SearchString: "SEARCH ASIAN BUSINESSES",
+  },
+  Malaysia: {
+    BusinessTypes: ["eco-accommodations"],
+    Prices: ["$$$"],
+    SearchString: "SEARCH ASIAN BUSINESSES",
+  },
+  Philippines: {
+    BusinessTypes: ["eco-accommodations", "socially responsible eateries"],
+    Prices: ["$$"],
+    SearchString: "SEARCH ASIAN BUSINESSES",
+  },
+  "United States Of America": {
+    BusinessTypes: ["eco-accommodations"],
+    Prices: ["$$"],
+    SearchString: "SEARCH ASIAN BUSINESSES",
+  },
+};
+
+export const ExploreFilter = () => {
   const [countryDropdownState, setCountryDopdownState] = useState(["All"]);
   const [countryChevronState, setCountryChevronState] = useState(false);
   const [businessChevronState, setBusinessChevronState] = useState(false);
@@ -85,7 +92,12 @@ export const ExploreFilter = ({
   const [businessTypesState, setBusinessTypesState] = useState(
     defBusinessTypes
   );
-  const [priceState, setPriceState] = useState(["all prices","under $200", "$200 - $500", "over $500"]);
+  const [priceState, setPriceState] = useState([
+    "all prices",
+    "under $200",
+    "$200 - $500",
+    "over $500",
+  ]);
   const countriesRef = useRef([]);
   const businessesRef = useRef([]);
   const pricesRef = useRef([]);
@@ -117,7 +129,7 @@ export const ExploreFilter = ({
     } else {
       if (countryDropdownState.includes(place)) {
         let selectArray = countriesRef.current.childNodes;
-        let newDropDownState = null; // because setCountryDropDownState is async
+        let newDropDownState = null;
         for (let i = 0; i < selectArray.length; i++) {
           let el = selectArray[i].firstChild;
           if (el.innerHTML === place) {
@@ -138,7 +150,6 @@ export const ExploreFilter = ({
           for (let i = 0; i < dropDownArray.length; i++) {
             let el = dropDownArray[i];
             const addArray = country[el]["BusinessTypes"];
-            // typeArray = [...typeArray, ...addArray];
             for (let j = 0; j < addArray.length; j++) {
               let type = addArray[j];
               if (!typeArray.includes(type)) {
@@ -306,22 +317,17 @@ export const ExploreFilter = ({
           />
         )}
         {countryChevronState ? (
-          <img
-            class={"down-outlined turnUp"}
-            onClick={toggleCountryChevron}
-            src={downChevron}
-            alt={""}
-          />
+          <div class={"down-outlined turnUp"} onClick={toggleCountryChevron} />
         ) : (
-          <img
-            className={"down-outlined"}
-            onClick={toggleCountryChevron}
-            src={downChevron}
-            alt={""}
-          />
+          <div className={"down-outlined"} onClick={toggleCountryChevron} />
         )}
       </div>
-      <div ref={countriesRef} className={`country-box-open ${!countryChevronState ? "box-cosed" : ""}`}>
+      <div
+        ref={countriesRef}
+        className={`country-box-open ${
+          !countryChevronState ? "box-cosed" : ""
+        }`}
+      >
         {countryChevronState &&
           countryNames.map((name, index) => {
             return (
@@ -343,22 +349,17 @@ export const ExploreFilter = ({
           BUSINESS TYPE: {businessDropdownState[0] !== "All" ? "..." : "All"}
         </span>
         {businessChevronState ? (
-          <img
-            class={"down-outlined turnUp"}
-            onClick={toggleBusinessChevron}
-            src={downChevron}
-            alt={""}
-          />
+          <div class={"down-outlined turnUp"} onClick={toggleBusinessChevron} />
         ) : (
-          <img
-            className={"down-outlined"}
-            onClick={toggleBusinessChevron}
-            src={downChevron}
-            alt={""}
-          />
+          <div className={"down-outlined"} onClick={toggleBusinessChevron} />
         )}
       </div>
-      <div ref={businessesRef} className={`business-box-open ${!businessChevronState ? "box-cosed" : ""}`}>
+      <div
+        ref={businessesRef}
+        className={`business-box-open ${
+          !businessChevronState ? "box-cosed" : ""
+        }`}
+      >
         {businessChevronState &&
           businessTypesState.map((type, index) => {
             return (
@@ -385,22 +386,15 @@ export const ExploreFilter = ({
           />
         )}
         {priceChevronState ? (
-          <img
-            class={"down-outlined turnUp"}
-            onClick={togglePriceChevron}
-            src={downChevron}
-            alt={""}
-          />
+          <div class={"down-outlined turnUp"} onClick={togglePriceChevron} />
         ) : (
-          <img
-            className={"down-outlined"}
-            onClick={togglePriceChevron}
-            src={downChevron}
-            alt={""}
-          />
+          <div className={"down-outlined"} onClick={togglePriceChevron} />
         )}
       </div>
-      <div ref={pricesRef} className={`price-box-open ${!priceChevronState ? "box-cosed" : ""}`}>
+      <div
+        ref={pricesRef}
+        className={`price-box-open ${!priceChevronState ? "box-cosed" : ""}`}
+      >
         {priceChevronState &&
           priceState.map((price, index) => {
             return (
@@ -420,7 +414,7 @@ export const ExploreFilter = ({
 
       <div className={"explore-filter-last-section"}>
         <div className={"explore-filter-search"}>
-          <img className={"magGlass"} src={magGlass} alt={""} />
+          <div className={"magGlass"} />
           <input
             className={"explore-filter-input"}
             type={"text"}

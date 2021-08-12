@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Stretch from './Stretch';
 import "./stretch.css";
 
-export default function Stretch({tiltle}) {
+export default function Stretchy({title: {title}}) {
   return (
     <div>jhfjhfgjhfjhf</div>
     // <a href="#" class="button">

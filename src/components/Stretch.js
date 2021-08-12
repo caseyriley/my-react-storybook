@@ -2,14 +2,13 @@ import React from "react";
 import PropTypes from 'prop-types';
 import Stretch from './Stretch';
 import "./stretch.css";
+import "./StretchJS"
 
 export default function Stretchy({title: {title}}) {
   return (
-    <div>jhfjhfgjhfjhf</div>
-    // <a href="#" class="button">
-    //   <canvas class="button__canvas"></canvas>
-    //   <span class="button__text">Hover me I am liquid</span>
-    // </a>
+<a href="/" class="btn-liquid">
+		<span class="inner">{title}</span>
+</a>
   );
 };
 

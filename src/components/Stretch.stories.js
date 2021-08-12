@@ -11,5 +11,10 @@ const Template = (args) => <Stretch {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  title: "Stretchy",
+  title: {title: 'Stretchy'}
+};
+
+export const Liquid = Template.bind({});
+Liquid.args = {
+  title: {title: 'Liquid'}
 };

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Stretch from './Stretch';
 import "./stretch.css";
 import "./StretchJS"
+import $ from 'jquery'
 
 export default function Stretchy({title: {title}}) {
   return (

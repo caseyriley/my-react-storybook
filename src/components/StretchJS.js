@@ -1,26 +1,28 @@
+import $ from 'jquery'
+
 $(function() {
 	// Vars
-	var pointsA = [],
-		pointsB = [],
-		$canvas = null,
-		canvas = null,
-		context = null,
-		vars = null,
-		points = 8,
-		viscosity = 20,
-		mouseDist = 70,
-		damping = 0.05,
-		showIndicators = false;
-		mouseX = 0,
-		mouseY = 0,
-		relMouseX = 0,
-		relMouseY = 0,
-		mouseLastX = 0,
-		mouseLastY = 0,
-		mouseDirectionX = 0,
-		mouseDirectionY = 0,
-		mouseSpeedX = 0,
-		mouseSpeedY = 0;
+	let pointsA = [];
+	let	pointsB = [];
+	let	$canvas = null;
+	let	canvas = null;
+	let	context = null;
+	let	vars = null;
+	let	points = 8;
+	let	viscosity = 20;
+	let	mouseDist = 70;
+	let	damping = 0.05;
+	let	showIndicators = false;
+	let	mouseX = 0;
+	let	mouseY = 0;
+	let	relMouseX = 0;
+	let	relMouseY = 0;
+	let	mouseLastX = 0;
+	let	mouseLastY = 0;
+	let	mouseDirectionX = 0;
+	let	mouseDirectionY = 0;
+	let	mouseSpeedX = 0;
+	let	mouseSpeedY = 0;
 
 	/**
 	 * Get mouse direction
@@ -162,7 +164,7 @@ $(function() {
 	 */
 	function renderCanvas() {
 		// rAF
-		rafID = requestAnimationFrame(renderCanvas);
+		let rafID = requestAnimationFrame(renderCanvas);
 
 		// Clear scene
 		context.clearRect(0, 0, $canvas.width(), $canvas.height());
@@ -180,7 +182,7 @@ $(function() {
 		var gradientY = Math.min(Math.max(mouseY - $canvas.offset().top, 0), $canvas.height());
 		var distance = Math.sqrt(Math.pow(gradientX - $canvas.width()/2, 2) + Math.pow(gradientY - $canvas.height()/2, 2)) / Math.sqrt(Math.pow($canvas.width()/2, 2) + Math.pow($canvas.height()/2, 2));
 
-		var gradient = context.createRadialGradient(gradientX, gradientY, 300+(300*distance), gradientX, gradientY, 0);
+		let gradient = context.createRadialGradient(gradientX, gradientY, 300+(300*distance), gradientX, gradientY, 0);
 		gradient.addColorStop(0, '#102ce5');
 		gradient.addColorStop(1, '#E406D6');
 
